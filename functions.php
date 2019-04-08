@@ -18,23 +18,6 @@ function _s_widgets_init() {
 }
 add_action( 'widgets_init', '_s_widgets_init' );
 
-function test_sc ($atts ){
-$atts = shortcode_atts(array(
-'tytul' => 'tytul',
-'opis' => 'opis'
-), $atts);
-$tytul = $atts['tytul'];
-$opis = $atts['opis'];
-$przycisk='<button class="test">'.$tytul.' </button>
-
-
-<div class="toggleSlide hide">'.$opis.'
-</div>';
-
-return $przycisk;
-}
-add_shortcode('test', 'test_sc');
-
 
 
 function komentarze($comment, $args, $depth) {
